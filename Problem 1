@@ -1,0 +1,58 @@
+#include <iostream>
+
+using namespace std;
+
+int main(){
+	
+	int arr[10], i, j, integer, total, big, biggest, small, smallest;
+	double average;
+	
+	cout << "Enter 10 integers: " << endl;
+	
+	for(i = 0; i < 10; i++){
+		cin >> arr[i];
+		total += arr[i];
+	}
+	
+	for(i = 0; i < 10; i++){
+		for(j = i + 1; j < 10; j++){
+			if(arr[i] > arr[j]){
+				integer = arr[i];
+				arr[i] = arr[j];
+				arr[j] = integer;
+			}
+		}
+	}
+	
+	
+	cout << "The integers arranged from smallest to biggest:" << endl;
+	
+	for(i = 0; i < 10; i++){
+		cout << arr[i] << " ";
+	}
+	
+	average = total/10;
+	
+	for(i = 0; i < 10; i++){
+		if(arr[big] < arr[i]){
+			big = i;
+			biggest = arr[big];
+		}
+	}
+	
+	for(i = 0; i < 10; i++){
+		if(arr[small] > arr[i]){
+			small = i;
+			smallest = arr[small];
+		}
+	}
+	
+	cout << "\nBiggest: " << biggest << endl;
+	cout << "Smallest: " << smallest << endl;
+	cout << "Total: " << total << endl;
+	cout << "Average: " << average << endl;
+	
+	return 0;
+	
+}
+
