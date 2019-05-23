@@ -1,0 +1,38 @@
+#include <iostream>
+
+using namespace std;
+
+int main(){
+	
+	int j, i, n, x;
+	char arrOP[100], arrIP[100];
+	
+	cout << "Enter number of characters to be inputed (maximum of 100): ";
+	cin >> n;
+	
+	cout << "Enter characters: ";
+	
+	for(i = 0; i < n; i++){
+		cin >> arrIP[i];
+	}
+	
+	cout << "Characters in order as inputed:" << endl;
+	
+	for(i = 0; i < n; i++){
+		cout << arrIP[i] << ", ";
+	}
+	
+	cout << "\nCharacters in reverse:" << endl;
+	
+	for(i = 0; i < n; i++){
+		arrOP[i] = arrIP[n-i-1];
+	}
+	
+	for(i = 0; i < n; i++){
+		cout << arrOP[i] << ", ";
+	}
+	
+	
+	return 0;
+	
+}
